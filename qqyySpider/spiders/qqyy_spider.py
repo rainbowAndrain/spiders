@@ -12,6 +12,7 @@ class QqyySpiderSpider(scrapy.Spider):
         # with open(filename, 'wb') as f:
         #     f.write(response.body)
 
+
         self.logger.info('current crawl url:%s' % response.url)
         self.logger.info(response.css('title::text').extract_first())
         self.logger.info(response.xpath("//li[contains(@class,'js_company')]/@class").extract_first())
